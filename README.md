@@ -1,7 +1,6 @@
-# embroider-eyeglass-reproduction
+# embroider-eyeglass-reproduction [![Build Status](https://travis-ci.com/stefanpenner/embroider-eyeglass-reproduction.svg?branch=master)](https://travis-ci.com/stefanpenner/embroider-eyeglass-reproduction)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Reproduction of ember-cli-eyeglass + embroider being un-happy
 
 ## Prerequisites
 
@@ -21,38 +20,31 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `ember build`
 
-### Code Generators
+Results in:
 
-Make use of the many generators for code, try `ember help generate` for more details
+```js
+Build Error (EyeglassCompiler) in /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/app.scss:1:9
+
+`_from-app-styles` was not found in any of the following locations:
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles.scss
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles.sass
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles.css
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/index.scss
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/index.sass
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/index.css
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/_index.scss
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/_index.sass
+  /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/_from-app-styles/_index.css
+    at /var/folders/4r/whc65vwj1xggvvky3yy1cp9m000mw4/T/broccoli-2069962fsd5l7Ddk4/out-085-funnel/app.scss:1:9
+```
 
 ### Running Tests
+
+There are tests that should pass if this is functioning: 
 
 * `ember test`
 * `ember test --server`
 
-### Linting
-
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+see: https://github.com/stefanpenner/embroider-eyeglass-reproduction/blob/master/tests/acceptance/app-test.js
