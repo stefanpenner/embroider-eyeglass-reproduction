@@ -1,0 +1,9 @@
+{
+  "name": "apple",
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "ember-cli-eyeglass": "*"
+  }
+}
